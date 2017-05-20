@@ -1,0 +1,18 @@
+<ion-view view-title = "Calendar">
+	<ion-content ng-controller="Calendar2Ctrl">
+        <div id='calendar2' ng-if="isLogin" > 
+            <div style="margin-left:20px;padding-bottom:20px">
+            <h4 >Click on the calendar to edit memo</h4>
+                <p>Note:  '-' is ongoing task, '+' is completed task
+                </p>
+            </div>
+           <div class="item item-divider">
+         <ion-item style="text-align:center;padding-left:2em ; " menu-close href="#/app/addmemo" >
+           Add memo
+        </ion-item>
+     </button>
+        </div>
+        <div class="card"ng-if="!isLogin">
+            <center>please login before used!</div>
+    <ion-content>
+</ion-content>

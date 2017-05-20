@@ -1,0 +1,68 @@
+<ion-view view-title = "Log in">
+	<ion-content ng-controller="loginCtrl">
+	
+
+    
+    <div class="list" ng-if="!islogin">
+ 
+      <div class="list">
+        <label class="item item-input">
+          <span class="input-label">Username</span>
+          <input type="text" id="user.username">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Password</span>
+          <input type="password" id="user.password">
+        </label>
+        <label class="item">
+          <button class="button button-block button-positive"  ng-click="doLogin()">Log in</button>
+        </label>
+      </div>
+      <div class="padding-bottom" style="margin-top:400px" >
+        <div class="bar bar-footer " style="left:56px;margin-bottom:20px;margin-top:40px" >
+                <ion-item 
+                style="text-align:center;padding-left:3em;padding-bottom:50px" 
+                menu-close href="#/app/register" >
+                  Sign up for I-notify
+                </ion-item>
+        </div>
+      </div>
+    </div>
+
+    <div class="card" ng-if="islogin">
+		  <div class="item item-text-wrap">
+          <div class="item item-divider">
+            <div class="col col-30" style="text-align:center">
+                  Welcome {{firstname}}  {{lastname}}
+            </div>
+          </div>
+          <h2 style="text-align:center;padding-top:20px;padding-bottom:20px"> Your Profile</h2>
+          <img src="img/user.png" style="margin-bottom:20px; margin-left:110px ;height:100px;" >
+            <p style="padding-left:70px;"> 
+                First name : {{firstname}}<br>
+                Last name : {{lastname}}<br>
+                Username : {{username}}<br>
+                Email : {{email}}
+            </p>
+		  </div>
+    
+    <div class="item item-divider">
+      <ion-item style="text-align:center;padding-left:2em ; " menu-close href="#/app/addmemo" >
+            Add memo
+          </ion-item>
+      </button>
+            <ion-item style="text-align:center;padding-left:2em ; " menu-close href="#/app/calendar" >
+            View calendar
+          </ion-item>
+      </button>
+      
+    <ion-item style="text-align:center;padding-left:0.8em ; color: red" menu-close ng-click="logout()">
+          Sign out
+        </ion-item>
+      </div>
+   </div>
+  </div>
+ </div>
+</ion-content>
+ 	
+</ion-view>

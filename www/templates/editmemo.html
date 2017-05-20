@@ -1,0 +1,43 @@
+
+<ion-view view-title = "Edit Memo">
+	<ion-content ng-controller="EditmemoCtrl">
+	
+	
+		<div class="table1">
+		  
+            <input type="hidden" ng-model="memo.memoid">
+
+        <label class="item item-input">
+          <span class="input-label">Topic</span>
+          <input type="text" ng-model="memo.topic">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Date</span>
+          <input type="datetime-local" ng-model="memo.datetime">
+        </label>
+        
+         <label class="item item-input">
+          <span class="input-label">Description</span>
+          <input type="text" ng-model="memo.description">
+        </label>
+
+        <label class="item item-input">
+          <span class="input-label">Status</span>
+            <label class="toggle">
+                <input type="checkbox" ng-model="memo.status">
+                <div class="track">
+                    <div class="handle"></div>
+                </div>
+            </label>
+        </label>
+
+        
+         <button class="button button-full button-positive" ng-click="save(memo)">
+			  Save
+			</button>
+            <button class="button button-full button-positive" ng-click="remove(memo)">
+			  Delete
+			</button>
+      </div>
+    </form>  
+</ion-modal-view>

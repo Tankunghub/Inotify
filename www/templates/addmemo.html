@@ -1,0 +1,29 @@
+
+<ion-view view-title = "Add Memo">
+	<ion-content ng-controller="AddmemoCtrl">
+	
+	<div class="card" ng-if="!isLogin" ><center>please login before used!</div>
+		<div class="table1" ng-if="isLogin">
+		  
+        <label class="item item-input">
+          <span class="input-label">Topic</span>
+          <input type="text" ng-model="memo.topic">
+        </label>
+        <label class="item item-input">
+          <span class="input-label">Date</span>
+          <input type="datetime-local" ng-model="memo.datetime">
+        </label>
+        
+         <label class="item item-input">
+          <span class="input-label">Description</span>
+          <input type="text" ng-model="memo.description">
+        </label>
+
+        
+         <button class="button button-full button-positive" ng-click="save(memo)">
+			  Save
+			</button>
+      </div>
+   
+
+</ion-modal-view>

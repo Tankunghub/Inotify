@@ -1,0 +1,46 @@
+<ion-view view-title = "Register">
+	<ion-content ng-controller="RegisterCtrl">
+	
+	 
+		<div class="table1" >
+		  <label class="item item-input">
+					<span class="input-label">First name</span>
+					<input type="text"   placeholder="First name" ng-model="user.firstname">
+		  </label>
+		   <label class="item item-input">
+					<span class="input-label">Last name</span>
+					<input type="text"   placeholder="Last name" ng-model="user.lastname">
+		  </label>
+			<label class="item item-input">
+					<span class="input-label">E-mail</span>
+					<input type="text"  placeholder="E-mail" ng-model="user.email">
+		  </label>
+      <label class="item item-input">
+					<span class="input-label">Username</span>
+					<input type="text"   placeholder="Username" ng-model="user.username">
+		  </label>
+      <label class="item item-input">
+					<span class="input-label">Password</span>
+					<input type="password"  placeholder="Password" ng-model="user.password">
+		  </label>
+      <label class="item item-input">
+					<span class="input-label">Confirm Password</span>
+					<input type="password"  placeholder="Password" ng-model="user.cpass">
+		  </label>
+			
+		  <button class="button button-full button-positive" ng-click="insert(user)">
+			  Sign up
+			</button>
+		</div>
+		
+	</ion-content>
+<!--button for go back to log in if user already have account-->
+	<div class="bar bar-footer " style="left:48px;margin-bottom:20px;margin-top:40px" >
+					  <ion-item 
+						style="text-align:center;padding-left:2em;padding-bottom:50px" 
+						menu-close href="#/app/login" >
+           		Already have an account?
+        		</ion-item>
+		</div>
+</ion-view>
+	
